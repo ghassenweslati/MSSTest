@@ -12,7 +12,7 @@ public class LigneCommande implements Serializable {
     private int idLigneCommande;
 
     private Long qte;
-    private BigDecimal prixUnitaire;
+    private BigDecimal prixUnitairee;
     private BigDecimal prixTotal;
     private Long etat;
 
@@ -27,9 +27,9 @@ public class LigneCommande implements Serializable {
     public LigneCommande() {
     }
 
-    public LigneCommande(Long qte, BigDecimal prixUnitaire, BigDecimal prixTotal, Long etat, Commande commande, Produit produit) {
+    public LigneCommande(Long qte, BigDecimal prixUnitairee, BigDecimal prixTotal, Long etat, Commande commande, Produit produit) {
         this.qte = qte;
-        this.prixUnitaire = prixUnitaire;
+        this.prixUnitairee = prixUnitairee;
         this.prixTotal = prixTotal;
         this.etat = etat;
         this.commande = commande;
@@ -52,12 +52,12 @@ public class LigneCommande implements Serializable {
         this.qte = qte;
     }
 
-    public BigDecimal getPrixUnitaire() {
-        return prixUnitaire;
+    public BigDecimal getPrixUnitairee() {
+        return prixUnitairee;
     }
 
-    public void setPrixUnitaire(BigDecimal prixUnitaire) {
-        this.prixUnitaire = prixUnitaire;
+    public void setPrixUnitairee(BigDecimal prixUnitairee) {
+        this.prixUnitairee = prixUnitairee;
     }
 
     public BigDecimal getPrixTotal() {

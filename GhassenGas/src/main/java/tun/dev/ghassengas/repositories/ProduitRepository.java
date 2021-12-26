@@ -9,6 +9,7 @@ import java.util.List;
 
 @Repository
 public interface ProduitRepository extends JpaRepository<Produit, Integer> {
-    @Query(value = "SELECT * FROM produit WHERE categorie_id=:categorieId", nativeQuery = true)
-    List<Produit> findAllByCategorie(int categorieId);
+	@Query(value = "SELECT * FROM produit JOIN ligne_commande ON ligne_commande.produit_id=produit.id_produit WHERE commande_id=:commandeId", nativeQuery = true)
+     List<Produit> listeProduitsDansCommande(@Param("commandeId") int commandeId);
+	
 }

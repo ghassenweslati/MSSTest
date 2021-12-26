@@ -31,9 +31,9 @@ public class LigneCommandeController {
         ligneCommande.setCommande(command);
         var produit = produitRepository.findById(produitId).get();
         ligneCommande.setProduit(produit);
-        ligneCommande.setPrixUnitaire(produit.getPrixUnitaire());
+        ligneCommande.setPrixUnitairee(produit.getPrixUnitaire());
         var quantite = new BigDecimal(ligneCommande.getQte());
-        BigDecimal prixTotal = quantite.multiply(ligneCommande.getPrixUnitaire());
+        BigDecimal prixTotal = quantite.multiply(ligneCommande.getPrixUnitairee());
         ligneCommande.setPrixTotal(prixTotal);
         ligneCommandeService.ajoutLigneCommande(ligneCommande);
     }

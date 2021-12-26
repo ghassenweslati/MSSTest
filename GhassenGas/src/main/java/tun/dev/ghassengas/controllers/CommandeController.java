@@ -23,8 +23,8 @@ public class CommandeController {
     public void ajouterCommande(@RequestBody Commande commande, @PathVariable int idClient) {
         commandeService.ajouterCommande(commande, idClient);
     }
-    @GetMapping("/listeProduitsDansCommande/{commandeId}")
-    public List<Produit> listeProduitsDansCommande(Integer commandeId){
+	@GetMapping("/listeProduitsDansCommande/{commandeId}")
+    public List<Produit> listeProduitsDansCommande(@PathVariable int commandeId){
 
         return commandeService.listeProduitsDansCommande(commandeId) ;
     }
@@ -33,4 +33,6 @@ public class CommandeController {
     public void validerCommande(@PathVariable int idCommande) {
         commandeService.validerCommande(idCommande);
     }
+	
+	
 }

@@ -43,7 +43,7 @@ public class CommandeService {
         commandeRepository.save(commande);
     }
 
-    public List<Produit> listeProduitsDansCommande(Integer commandeId) {
-        return  commandeRepository.listeProduitsDansCommande(commandeId);
+public List<Produit> listeProduitsDansCommande(int commandeId) {
+        return  produitRepository.listeProduitsDansCommande(commandeId);
     }
 }
